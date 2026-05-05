@@ -26,9 +26,5 @@ public class Student {
     private Address address;
 
     @ManyToOne
-<<<<<<< HEAD
-    @JsonBackReference("school-students")
-=======
->>>>>>> 34d5e488f18f7e6657e5c90be86721fb4d6fcde8
     private School school;
 }
