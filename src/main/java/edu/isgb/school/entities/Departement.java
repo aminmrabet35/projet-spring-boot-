@@ -1,5 +1,4 @@
 package edu.isgb.school.entities;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 @Entity
@@ -16,8 +15,11 @@ public class Departement {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
+<<<<<<< HEAD
 
     @JsonBackReference("school-departments")
 
+=======
+>>>>>>> 34d5e488f18f7e6657e5c90be86721fb4d6fcde8
     private School school;
 }

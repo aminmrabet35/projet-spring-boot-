@@ -1,6 +1,5 @@
 package edu.isgb.school.entities;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
@@ -23,14 +22,11 @@ public class School {
     private Integer phone;
 
     @OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
-    @JsonManagedReference("school-departments")
     private List<Departement> departments;
 
     @OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
-    @JsonManagedReference("school-students")
     private List<Student> students;
 
     @OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
-    @JsonManagedReference("school-instructors")
     private List<Instructor> instructors;
 }

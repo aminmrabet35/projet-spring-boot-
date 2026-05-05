@@ -7,7 +7,11 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
+<<<<<<< HEAD
     @Id
+=======
+    @Id 
+>>>>>>> 34d5e488f18f7e6657e5c90be86721fb4d6fcde8
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PK_ADDRESS")
     private Integer idAddress;
