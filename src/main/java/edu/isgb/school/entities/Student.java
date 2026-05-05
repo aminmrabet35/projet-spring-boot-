@@ -1,10 +1,9 @@
 package edu.isgb.school.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "t_student")
@@ -23,14 +22,11 @@ public class Student {
     private String name;
 
     @Column(name = "cl_birthdate")
-    private LocalDate birthDate;
+    private Date birthDate;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_PK_ADDRESS")
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name = "school_PK_school")
-    @JsonBackReference("school-students")
     private School school;
 }
