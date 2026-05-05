@@ -5,8 +5,6 @@ import lombok.*;
 @Entity
 @Table(name = "t_department")
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Departement {
@@ -18,7 +16,7 @@ public class Departement {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "school_PK_school")
+
     @JsonBackReference("school-departments")
 
     private School school;

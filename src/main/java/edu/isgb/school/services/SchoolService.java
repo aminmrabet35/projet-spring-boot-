@@ -11,11 +11,16 @@ import java.util.Optional;
 @Service
 public class SchoolService {
 
-    @Autowired private SchoolRepository schoolRepository;
-    @Autowired private StudentRepository studentRepository;
-    @Autowired private InstructorRepository instructorRepository;
-    @Autowired private CourseRepository courseRepository;
-    @Autowired private DepartmentRepository departmentRepository;
+    @Autowired
+    private SchoolRepository schoolRepository;
+    @Autowired
+    private StudentRepository studentRepository;
+    @Autowired
+    private InstructorRepository instructorRepository;
+    @Autowired
+    private CourseRepository courseRepository;
+    @Autowired
+    private DepartmentRepository departmentRepository;
 
     public School createSchool(School school) {
 

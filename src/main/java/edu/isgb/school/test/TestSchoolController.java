@@ -19,7 +19,6 @@ public class TestSchoolController {
         return schoolService.createSchool(school);
     }
 
-
     @GetMapping("/school/{id}")
     public School getSchoolById(@PathVariable Integer id) {
         return schoolService.getSchoolById(id);

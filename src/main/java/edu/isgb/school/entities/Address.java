@@ -4,12 +4,11 @@ import lombok.*;
 @Entity
 @Table(name = "t_address")
 @Data
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PK_ADDRESS")
     private Integer idAddress;
     @Column(name = "cl_city")
